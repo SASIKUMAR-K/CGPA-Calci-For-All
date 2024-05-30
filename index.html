@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CGPA CALC</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<div class="header">
+			<div><h1>CGPA CALC</h1></div>
+			<div class="navlinks">
+				<button class="buttons" onclick="navigateCalculator()">
+					Calculator
+				</button>
+				<button class="buttons" onclick="navigateAbout()">About</button>
+				<button class="buttons" onclick="navigateContact()">Contact</button>
+			</div>
+		</div>
+		<div class="calculator">
+			<div class="cgpaFormatSelection">
+				<div>
+					<h3>Select the CGPA Format</h3>
+				</div>
+				<div class="cgpaFormatSelectionRadio">
+					<input type="radio" name="cgpaFormat" id="outof4" /><label
+						for="outof4"
+					>
+						Out Of 4</label
+					>
+					<pre>‎ ‎ </pre>
+					<input
+						type="radio"
+						name="cgpaFormat"
+						id="outof10"
+						checked="checked"
+					/><label for="outof10"> Out Of 10</label>
+				</div>
+			</div>
+			<div class="inputArea">
+				<div class="oneInput" id="oneInput 1">
+					<input type="text" class="subjectName" placeholder="Subject Name-1" />
+					<input type="number" class="mark" placeholder="Mark-1*" />
+					<input type="number" class="credits" placeholder="Credit-1*" />
+					<button class="deleteButton">
+						<i class="fa-solid fa-trash-can" id="deleteButton 1"></i>
+					</button>
+				</div>
+			</div>
+			<div class="submitArea">
+				<p>Select a Number of Subject You Want Add</p>
+				<div class="countSubject">
+					<input type="number" min="1" max="50" value="1" class="count" />
+					<button onclick="createForm()">
+						<i class="fa-solid fa-circle-plus"> Add</i>
+					</button>
+				</div>
+				<div class="submitButton">
+					<button onclick="calculate()">Submit</button>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
